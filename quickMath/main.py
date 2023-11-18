@@ -1,19 +1,19 @@
 import random
-import os
-import time
+from time import sleep
+from os import system
 
 def print_result(bresult: bool, msg: str):
-    os.system("clear")
+    system("clear")
     if (bresult):
         print("Correct")
     else:
         print("Incorrect")
     print(msg)
-    time.sleep(3)
+    sleep(3)
 
 def is_command(i) -> bool:
     if (i == "exit"):
-        os.system("clear")
+        system("clear")
         return True
     return False
 
@@ -33,7 +33,7 @@ def get_input(msg: str) -> int:
         if (validate_input(data)):
             run = False
         else:
-            os.system("clear")
+            system("clear")
     return int(data)
         
 def main():
@@ -47,7 +47,7 @@ def main():
             print_result(False, f"{num1} + {num2} = {num1 + num2}")
         else:
             print_result(True, f"{num1} + {num2} = {num1 + num2}")
-        os.system("clear")
+        system("clear")
 
 
 if __name__ == "__main__":
