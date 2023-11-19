@@ -1,5 +1,5 @@
 run:
-	@python3 main.py
+	@cd srcs && python3 main.py
 
 clean:
 	@clear

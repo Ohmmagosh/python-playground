@@ -188,7 +188,7 @@ class QuickMath:
 		console.print("[bold bright_red]Bye bye~~~~~")
 		sleep(1)
 		system("clear")
-		exit()
+		exit(0)
 
 
 	def home(self):
