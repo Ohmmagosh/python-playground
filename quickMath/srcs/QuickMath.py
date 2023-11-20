@@ -90,7 +90,7 @@ class QuickMath:
 		console.print(quiz, end="")
 
 
-	def multiply(self, num1, num2):
+	def multiply(self, num1, num2) -> None:
 		self.print_score()
 		self.print_quiz("[bold green]Multiply", f"{num1} * {num2} = ")
 		result = input()
@@ -102,7 +102,7 @@ class QuickMath:
 		return
 
 
-	def add(self, num1, num2):
+	def add(self, num1, num2) -> None:
 		self.print_score()
 		self.print_quiz("[bold green]Add", f"{num1} + {num2} = ")
 		result = input()
@@ -114,7 +114,7 @@ class QuickMath:
 		return
 
 
-	def sub(self, num1, num2):
+	def sub(self, num1, num2) -> None:
 		self.print_score()
 		self.print_quiz("[bold green]Sub", f"{num1} - {num2} = ")
 		result = input()
@@ -161,7 +161,7 @@ class QuickMath:
 
 
 
-	def quickMath_start(self):
+	def quickMath_start(self) -> None:
 		system("clear")
 		while(self.brun and self.quiz_count < 10):
 			num1 = randint(1, self.level)
@@ -183,7 +183,7 @@ class QuickMath:
 			self.quickMath_start()
 
 
-	def quickMath_exit(self):
+	def quickMath_exit(self) -> None:
 		system("clear")
 		console.print("[bold bright_red]Bye bye~~~~~")
 		sleep(1)
@@ -191,7 +191,7 @@ class QuickMath:
 		exit(0)
 
 
-	def home(self):
+	def home(self) -> None:
 		system("clear")
 		console.print("[bold green]QuickMath[/bold green]")
 		self.get_player_name()
@@ -199,13 +199,13 @@ class QuickMath:
 		self.brun = True
 
 
-	def reset_score_and_run(self):
+	def reset_score_and_run(self) -> None:
 		self.score = 0
 		self.quiz_count = 0
 		self.brun = False
 
 
-	def run(self):
+	def run(self) -> None:
 		self.home()
 		self.quickMath_start()
 
