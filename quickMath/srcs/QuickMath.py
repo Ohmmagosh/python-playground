@@ -1,8 +1,10 @@
 from os import system
 from time import sleep
+from typing import Any
 from rich import print as rprint
 from rich.console import Console
 from random import randint
+from PlayerScore import PlayerScore
 
 console = Console()
 
@@ -13,9 +15,11 @@ class QuickMath:
 		self.result = 0
 		self.player_name = ""
 		self.level = 0
+		self.level_str = ""
 		self.quiz = []
 		self.score = 0
 		self.quiz_count = 0
+		self.player_score = None
 
 
 	def get_level(self) -> int:
@@ -31,10 +35,13 @@ class QuickMath:
 		data = str(input())
 		if (data == "1" or data.lower() == "easy"):
 			self.level = 10
+			self.level_str = "Easy"
 		elif (data == "2" or data.lower() == "medium"):
 			self.level = 100
+			self.level_str = "Medium"
 		elif (data == "3" or data.lower() == "hard"):
 			self.level = 1000
+			self.level_str = "Hard"
 		elif (data == "4" or data.lower() == "exit"):
 			exit()
 		else:
@@ -142,6 +149,10 @@ class QuickMath:
 		console.print(msg)
 
 
+	def set_player_score(self, title: str, mode: str) -> None:
+		self.player_score = PlayerScore(title, mode)
+
+
 	def quickMath_again(self):
 		console.print("[bold yellow]You want to play again? [bold green]Y [bold yellow]or [bold red]N : ", end="")
 		again = input()
@@ -158,7 +169,6 @@ class QuickMath:
 			self.quickMath_exit()
 		else:
 			self.quickMath_again()
-
 
 
 	def quickMath_start(self) -> None:
@@ -196,6 +206,8 @@ class QuickMath:
 		console.print("[bold green]QuickMath[/bold green]")
 		self.get_player_name()
 		self.get_level()
+		self.set_player_score(self.player_name.capitalize(), self.level_str)
+		self.player_score.show_table()
 		self.brun = True
 
 
