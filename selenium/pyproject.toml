@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "selenium-stock"
+version = "0.1.0"
+description = "learn selenium"
+authors = ["Phatcharaphol Suanprom <phatcharaphol@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.15.2"
+unzip = "^1.0.0"
+rich = "^13.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
