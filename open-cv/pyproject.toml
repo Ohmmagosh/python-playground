@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "open-cv"
+version = "0.1.0"
+description = ""
+authors = ["Phatcharaphol Suanprom"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opencv-python = "^4.8.1.78"
+pyautogui = "^0.9.54"
+numpy = "^1.26.2"
+rich = "^13.7.0"
+python-xlib = "^0.33"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "kidtungtui"
+version = "1.0.0"
+description = ""
+authors = ["ohmmaagoch <ohm@42bangkok.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rich = "^13.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
