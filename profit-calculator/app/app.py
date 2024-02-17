@@ -11,7 +11,7 @@ console = Console()
 class App:
   def __init__(self):
     self.monney_amount: list = 0
-    self.profit_set: list = list([0.03, 0.05, 0.1, -0.05])
+    self.profit_set: list = list([0.03, 0.05, 0.1])
     self.static: list = self.create_static(len(self.profit_set))
 
   @property
